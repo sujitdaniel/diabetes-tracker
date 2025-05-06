@@ -10,8 +10,9 @@ const userRoutes = require('./routes/userRoutes');
 const app = express();
 connectDB();
 
+// Updated CORS configuration to accept both origins
 app.use(cors({
-  origin: 'http://127.0.0.1:5500',
+  origin: ['http://127.0.0.1:5500', 'http://localhost:3000'],
   credentials: true
 }));
 
